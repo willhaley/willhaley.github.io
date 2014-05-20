@@ -1,0 +1,182 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>2048</title>
+
+  <!-- build:css main.min.css -->
+  <link rel="stylesheet" href="css/main.css"> 
+  <!-- /build -->
+</head>
+
+<body>
+
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 17.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+
+<div style="width: 325px; float: left">
+
+<svg version="1.0" id="gameboard" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="500px" width="500px" x="0px" y="0px" viewBox="0 0 600 600" enable-background="new 0 0 600 600">
+
+	<path id="background" fill="#BCBEC0" d="M550,533.3c0,7.7-6,13.9-13.3,13.9H63.3C56,547.3,50,541,50,533.3V61.2 c0-7.7,6-13.9,13.3-13.9h473.4c7.4,0,13.3,6.2,13.3,13.9V533.3z"/>
+
+
+	<!-- 1st Row -->
+	<g id="r1c1">
+		<path fill="#FFFFFF" d="M143.3,151.5c0,1.2-0.9,2.1-2,2.1h-71c-1.1,0-2-0.9-2-2.1V80.7c0-1.2,0.9-2.1,2-2.1h71c1.1,0,2,0.9,2,2.1 V151.5z"/>
+		<text transform="matrix(1 0 0 1 87 140)" font-family="'MyriadPro-Regular'" font-size="72"></text>
+	</g>
+
+	<g id="r1c2">
+		<path fill="#FFFFFF" d="M240.4,151.5c0,1.2-0.9,2.1-2,2.1h-71c-1.1,0-2-0.9-2-2.1V80.7c0-1.2,0.9-2.1,2-2.1h71c1.1,0,2,0.9,2,2.1 V151.5z"/>
+		<text transform="matrix(1 0 0 1 183 140)" font-family="'MyriadPro-Regular'" font-size="72"></text>
+	</g>
+
+	<g id="r1c3">
+		<path fill="#FFFFFF" d="M337.5,151.5c0,1.2-0.9,2.1-2,2.1h-71c-1.1,0-2-0.9-2-2.1V80.7c0-1.2,0.9-2.1,2-2.1h71c1.1,0,2,0.9,2,2.1 V151.5z"/>
+		<text transform="matrix(1 0 0 1 280 140)" font-family="'MyriadPro-Regular'" font-size="72"></text>
+	</g>
+
+	<g id="r1c4">
+		<path fill="#FFFFFF" d="M434.6,151.5c0,1.2-0.9,2.1-2,2.1h-71c-1.1,0-2-0.9-2-2.1V80.7c0-1.2,0.9-2.1,2-2.1h71c1.1,0,2,0.9,2,2.1 V151.5z"/>
+		<text transform="matrix(1 0 0 1 378 140)" font-family="'MyriadPro-Regular'" font-size="72"></text>
+	</g>
+
+	<g id="r1c5">
+		<path fill="#FFFFFF" d="M530.8,151.5c0,1.2-0.9,2.1-2,2.1h-71c-1.1,0-2-0.9-2-2.1V80.7c0-1.2,0.9-2.1,2-2.1h71c1.1,0,2,0.9,2,2.1 V151.5z"/>
+		<text transform="matrix(1 0 0 1 474 140)" font-family="'MyriadPro-Regular'" font-size="72"></text>
+	</g>
+
+	<!-- 2nd Row -->
+	<g id="r2c1">
+		<path fill="#FFFFFF" d="M143.3,240.5c0,1.2-0.9,2.1-2,2.1h-71c-1.1,0-2-0.9-2-2.1v-70.8c0-1.2,0.9-2.1,2-2.1h71c1.1,0,2,0.9,2,2.1 V240.5z"/>
+		<text transform="matrix(1 0 0 1 87 229)" font-family="'MyriadPro-Regular'" font-size="72"></text>
+	</g>
+
+	<g id="r2c2">
+		<path fill="#FFFFFF" d="M240.4,240.5c0,1.2-0.9,2.1-2,2.1h-71c-1.1,0-2-0.9-2-2.1v-70.8c0-1.2,0.9-2.1,2-2.1h71c1.1,0,2,0.9,2,2.1 V240.5z"/>
+		<text transform="matrix(1 0 0 1 183 229)" font-family="'MyriadPro-Regular'" font-size="72"></text>
+	</g>
+
+	<g id="r2c3">
+		<path fill="#FFFFFF" d="M337.5,240.5c0,1.2-0.9,2.1-2,2.1h-71c-1.1,0-2-0.9-2-2.1v-70.8c0-1.2,0.9-2.1,2-2.1h71c1.1,0,2,0.9,2,2.1 V240.5z"/>
+		<text transform="matrix(1 0 0 1 280 229)" font-family="'MyriadPro-Regular'" font-size="72"></text>
+	</g>
+
+	<g id="r2c4">
+		<path fill="#FFFFFF" d="M434.6,240.5c0,1.2-0.9,2.1-2,2.1h-71c-1.1,0-2-0.9-2-2.1v-70.8c0-1.2,0.9-2.1,2-2.1h71c1.1,0,2,0.9,2,2.1 V240.5z"/>
+		<text transform="matrix(1 0 0 1 378 229)" font-family="'MyriadPro-Regular'" font-size="72"></text>
+	</g>
+
+	<g id="r2c5">
+		<path fill="#FFFFFF" d="M531.7,240.5c0,1.2-0.9,2.1-2,2.1h-71c-1.1,0-2-0.9-2-2.1v-70.8c0-1.2,0.9-2.1,2-2.1h71c1.1,0,2,0.9,2,2.1 V240.5z"/>
+		<text transform="matrix(1 0 0 1 474 229)" font-family="'MyriadPro-Regular'" font-size="72"></text>
+	</g>
+
+
+
+	<!--  3th Row -->
+	<g id="r3c1">
+		<path fill="#FFFFFF" d="M143.3,329.5c0,1.2-0.9,2.1-2,2.1h-71c-1.1,0-2-0.9-2-2.1v-70.8c0-1.2,0.9-2.1,2-2.1h71c1.1,0,2,0.9,2,2.1 V329.5z"/>
+		<text transform="matrix(1 0 0 1 87 319)" font-family="'MyriadPro-Regular'" font-size="72"></text>
+	</g>
+
+	<g id="r3c2">
+		<path fill="#FFFFFF" d="M240.4,329.5c0,1.2-0.9,2.1-2,2.1h-71c-1.1,0-2-0.9-2-2.1v-70.8c0-1.2,0.9-2.1,2-2.1h71c1.1,0,2,0.9,2,2.1 V329.5z"/>
+		<text transform="matrix(1 0 0 1 183 319)" font-family="'MyriadPro-Regular'" font-size="72"></text>
+	</g>
+
+	<g id="r3c3">
+		<path fill="#FFFFFF" d="M337.5,329.5c0,1.2-0.9,2.1-2,2.1h-71c-1.1,0-2-0.9-2-2.1v-70.8c0-1.2,0.9-2.1,2-2.1h71c1.1,0,2,0.9,2,2.1 V329.5z"/>
+		<text transform="matrix(1 0 0 1 280 319)" font-family="'MyriadPro-Regular'" font-size="72"></text>
+	</g>
+
+	<g id="r3c4">
+		<path fill="#FFFFFF" d="M434.6,329.5c0,1.2-0.9,2.1-2,2.1h-71c-1.1,0-2-0.9-2-2.1v-70.8c0-1.2,0.9-2.1,2-2.1h71c1.1,0,2,0.9,2,2.1 V329.5z"/>
+		<text transform="matrix(1 0 0 1 378 319)" font-family="'MyriadPro-Regular'" font-size="72"></text>
+	</g>
+
+	<g id="r3c5">
+		<path fill="#FFFFFF" d="M531.7,329.5c0,1.2-0.9,2.1-2,2.1h-71c-1.1,0-2-0.9-2-2.1v-70.8c0-1.2,0.9-2.1,2-2.1h71c1.1,0,2,0.9,2,2.1 V329.5z"/>
+		<text transform="matrix(1 0 0 1 474 319)" font-family="'MyriadPro-Regular'" font-size="72"></text>
+	</g>
+
+	<!--  4th Row -->
+	<g id="r4c1">
+		<path fill="#FFFFFF" d="M143.3,418.5c0,1.2-0.9,2.1-2,2.1h-71c-1.1,0-2-0.9-2-2.1v-70.8c0-1.2,0.9-2.1,2-2.1h71c1.1,0,2,0.9,2,2.1 V418.5z"/>
+		<text transform="matrix(1 0 0 1 87 408)" font-family="'MyriadPro-Regular'" font-size="72"></text>
+	</g>
+
+	<g id="r4c2">
+		<path fill="#FFFFFF" d="M240.4,418.5c0,1.2-0.9,2.1-2,2.1h-71c-1.1,0-2-0.9-2-2.1v-70.8c0-1.2,0.9-2.1,2-2.1h71c1.1,0,2,0.9,2,2.1 V418.5z"/>
+		<text transform="matrix(1 0 0 1 183 408)" font-family="'MyriadPro-Regular'" font-size="72"></text>
+	</g>
+
+	<g id="r4c3">
+		<path fill="#FFFFFF" d="M337.5,418.5c0,1.2-0.9,2.1-2,2.1h-71c-1.1,0-2-0.9-2-2.1v-70.8c0-1.2,0.9-2.1,2-2.1h71c1.1,0,2,0.9,2,2.1 V418.5z"/>
+		<text transform="matrix(1 0 0 1 280 408)" font-family="'MyriadPro-Regular'" font-size="72"></text>
+	</g>
+
+	<g id="r4c4">
+		<path fill="#FFFFFF" d="M434.6,418.5c0,1.2-0.9,2.1-2,2.1h-71c-1.1,0-2-0.9-2-2.1v-70.8c0-1.2,0.9-2.1,2-2.1h71c1.1,0,2,0.9,2,2.1 V418.5z"/>
+		<text transform="matrix(1 0 0 1 378 408)" font-family="'MyriadPro-Regular'" font-size="72"></text>
+	</g>
+
+	<g id="r4c5">
+		<path fill="#FFFFFF" d="M531.7,418.5c0,1.2-0.9,2.1-2,2.1h-71c-1.1,0-2-0.9-2-2.1v-70.8c0-1.2,0.9-2.1,2-2.1h71c1.1,0,2,0.9,2,2.1 V418.5z"/>
+		<text transform="matrix(1 0 0 1 474 408)" font-family="'MyriadPro-Regular'" font-size="72"></text>
+	</g>
+
+<!-- 5th Row -->
+	<g id="r5c1">
+		<path fill="#FFFFFF" d="M143.3,507.5c0,1.2-0.9,2.1-2,2.1h-71c-1.1,0-2-0.9-2-2.1v-70.8c0-1.2,0.9-2.1,2-2.1h71c1.1,0,2,0.9,2,2.1 V507.5z"/>
+		<text transform="matrix(1 0 0 1 87 497)" font-family="'MyriadPro-Regular'" font-size="72"></text>
+	</g>
+
+	<g id="r5c2">
+		<path fill="#FFFFFF" d="M240.4,507.5c0,1.2-0.9,2.1-2,2.1h-71c-1.1,0-2-0.9-2-2.1v-70.8c0-1.2,0.9-2.1,2-2.1h71c1.1,0,2,0.9,2,2.1 V507.5z"/>
+		<text transform="matrix(1 0 0 1 183 497)" font-family="'MyriadPro-Regular'" font-size="72"></text>
+	</g>
+
+	<g id="r5c3">
+		<path fill="#FFFFFF" d="M337.5,507.5c0,1.2-0.9,2.1-2,2.1h-71c-1.1,0-2-0.9-2-2.1v-70.8c0-1.2,0.9-2.1,2-2.1h71c1.1,0,2,0.9,2,2.1 V507.5z"/>
+		<text transform="matrix(1 0 0 1 280 497)" font-family="'MyriadPro-Regular'" font-size="72"></text>
+	</g>
+
+	<g id="r5c4">
+		<path fill="#FFFFFF" d="M434.6,507.5c0,1.2-0.9,2.1-2,2.1h-71c-1.1,0-2-0.9-2-2.1v-70.8c0-1.2,0.9-2.1,2-2.1h71c1.1,0,2,0.9,2,2.1 V507.5z"/>
+		<text transform="matrix(1 0 0 1 378 497)" font-family="'MyriadPro-Regular'" font-size="72"></text>
+	</g>
+
+	<g id="r5c5">
+		<path fill="#FFFFFF" d="M531.7,507.5c0,1.2-0.9,2.1-2,2.1h-71c-1.1,0-2-0.9-2-2.1v-70.8c0-1.2,0.9-2.1,2-2.1h71c1.1,0,2,0.9,2,2.1 V507.5z"/>
+		<text transform="matrix(1 0 0 1 474 497)" font-family="'MyriadPro-Regular'" font-size="72"></text>
+	</g>
+
+</svg>
+</div>
+<div style="width: 350px; float: left">
+    <p>
+        <button id="up">UP</button>
+        <button id="down">DOWN</button>
+        <button id="left">LEFT</button>
+        <button id="right">RIGHT</button>
+    </p>
+</div>
+
+  <!-- build:js main.min.js -->
+  <script src="bower_components/snap.svg/dist/snap.svg-min.js"></script>
+  <script src="bower_components/lodash/dist/lodash.min.js"></script>
+  <script src="bower_components/jquery/dist/jquery.min.js"></script>
+  <script src="js/boardMove.js"></script>
+  <script src="js/colorKey.js"></script>
+  <script src="js/tiles.js"></script>
+  <script src="js/gameBoard.js"></script>
+  <script src="js/findEmtpyTile.js"></script>
+  <script src="js/main.js"></script>
+  <!-- /build -->
+
+</body>
+</html>
+

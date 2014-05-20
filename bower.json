@@ -1,0 +1,17 @@
+{
+  "name": "2048",
+  "version": "0.0.0",
+  "dependencies": {
+    "phaser-official": "latest"
+  },
+  "homepage": "https://github.com/willhaley/2048",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
