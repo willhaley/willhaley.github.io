@@ -11,11 +11,10 @@ window.onload = function () {
   function moveTiles(direction){
 
     var svg = Snap("#gameboard");
+    tiles = move[direction](tiles);
 
-    var boardMove = move.factory(direction);
+    tiles = populatEmptyTitle.init(tiles);
 
-    tiles = boardMove.init(tiles);
-
-    gameBoard.drawBoard(svg, populatEmptyTitle.init(tiles), colors);
+    gameBoard.drawBoard(svg, tiles, colors);
 
   }
