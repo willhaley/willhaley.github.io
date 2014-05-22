@@ -5,12 +5,17 @@ window.onload = function () {
   tiles = populatEmptyTitle.init(tiles);
   gameBoard.drawBoard(svg, tiles, colors);
 
-  $('#right').click(function(){
 
-    console.log(svg, moveRight.init(tiles));
-    tiles = moveRight.init(tiles);
-    tiles = populatEmptyTitle.init(tiles);
-    gameBoard.drawBoard(svg, tiles, colors);
-  });
 };
 
+  function moveTiles(direction){
+
+    var svg = Snap("#gameboard");
+
+    var boardMove = move.factory(direction);
+
+    tiles = boardMove.init(tiles);
+
+    gameBoard.drawBoard(svg, populatEmptyTitle.init(tiles), colors);
+
+  }

@@ -1,5 +1,34 @@
 'use strict';
 
+var move = {
+
+  factory: function(direction){
+    switch(direction){
+      case 'right':
+        return moveRight;
+        break;
+      case 'left':
+        return moveLeft;
+        break;
+      case 'up':
+        break;
+      case 'down':
+        break;
+    }
+  },
+
+  reassembleTiles: function(rows, tiles){
+
+    var idx = 0;
+    _.forEach(rows, function(row){
+      _.forEach(row, function(cell){ tiles[idx] = cell; idx++; }, this);
+    }, this);
+
+    return tiles;
+  }
+
+};
+
 var moveRight = {
 
   tiles: [],
@@ -13,14 +42,13 @@ var moveRight = {
       this.rows[idx] =this.orderRow(this.rows[idx]);
     }
 
-     this.reassembleTiles();
+    this.tiles = move.reassembleTiles(this.rows, this.tiles);
     return this.tiles;
   },
 
   orderRow: function(row){
 
     for( var idx in row ){
-
 
       var next = (idx*1)+1;
 
@@ -31,19 +59,10 @@ var moveRight = {
     }
 
     return row;
-  },
-
-  reassembleTiles: function(){
-
-
-    var idx = 0;
-    _.forEach(this.rows, function(row){
-      _.forEach(row, function(cell){
-        this.tiles[idx] = cell;
-        idx++;
-      }, this);
-    }, this);
-
   }
+
+}
+
+var moveLeft = {
 
 }
