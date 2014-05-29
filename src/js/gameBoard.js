@@ -23,6 +23,7 @@ var gameBoard = {
         tilePath.attr({fill: color[tile.value]});
       }
       else{
+        tileText.node.textContent = '';
         tilePath.attr({ fill: '#FFF' });
       }
 

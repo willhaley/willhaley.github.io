@@ -103,7 +103,7 @@ var move = {
     for( var i in values ) {
       if ( values[i] == values[i*1+1] ){
         values[i*1+1] = values[i]*2;
-        values[i] = null;
+        values[i] = '';
       }
     }
     return values;
