@@ -100,11 +100,20 @@ var move = {
     if ( values.length < 2 ){
       return values;
     }
+
+    var skip = null;
+
     for( var i in values ) {
+      if ( i == skip ){
+        skip = null;
+        continue;
+      }
       if ( values[i] == values[i*1+1] ){
         values[i*1+1] = values[i]*2;
         values[i] = '';
+        skip = i*1+1;
       }
+
     }
     return values;
   }
