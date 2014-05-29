@@ -2,35 +2,88 @@
 
 var move = {
 
+  somethingMoved: false,
   rows: null,
-
   right: function(tiles){
 
-    var rows =  _.groupBy(tiles, 'row');
+    this.rows =  _.groupBy(tiles, 'row');
 
-    for ( var idx in rows ){
-      rows[idx]=this.orderRight(rows[idx]);
-    }
+    for ( var idx in this.rows ){
 
-    return this.reassemble(rows, tiles);
+      var values = _.pluck(this.rows[idx], 'value');
+      values = this.consolidate( _.filter(values, function(value){ return (value)}) );
 
-  },
+      var i = 4;
+      while(i>=0){
+        this.rows[idx][i].value =  _(values).pop();
+        i--;
+      }
 
-  left: function(tiles){
-
-    this.rows = _.groupBy(tiles, 'row');
-
-    for ( var idx in  this.rows ){
-
-      this.rows[idx] = this.orderLeft( this.rows[idx], idx);
     }
 
     return this.reassemble(this.rows, tiles);
 
   },
 
-  up: function(tiles){},
-  down: function(tiles){},
+  left: function(tiles){
+
+    this.rows =  _.groupBy(tiles, 'row');
+
+    for ( var idx in this.rows ){
+
+      var values = _.pluck(this.rows[idx], 'value');
+      values = this.consolidate( _.filter(values, function(value){ return (value)}).reverse() );
+
+      var i = 0;
+      while(i<5){
+        this.rows[idx][i].value =  _(values).pop();
+        i++;
+      }
+
+    }
+
+    return this.reassemble(this.rows, tiles);
+
+  },
+
+  up: function(tiles){
+
+    this.rows =  _.groupBy(tiles, 'column');
+
+    for ( var idx in this.rows ) {
+
+      var values = _.pluck(this.rows[idx], 'value');
+      values = this.consolidate( _.filter(values, function (value) { return (value) }).reverse() );
+
+      var i = 0;
+      while (i < 5) {
+        this.rows[idx][i].value = _(values).pop();
+        i++;
+      }
+    }
+    return this.reassemble(this.rows, tiles);
+  },
+
+  down: function(tiles){
+
+    this.rows =  _.groupBy(tiles, 'column');
+
+    for ( var idx in this.rows ){
+
+      var values = _.pluck(this.rows[idx], 'value');
+      values = this.consolidate( _.filter(values, function(value){ return (value)}) );
+
+      var i = 4;
+      while(i>=0){
+        this.rows[idx][i].value =  _(values).pop();
+        i--;
+      }
+
+    }
+
+    return this.reassemble(this.rows, tiles);
+
+  },
 
   reassemble: function(rows, tiles){
 
@@ -42,39 +95,18 @@ var move = {
     return tiles;
   },
 
-  orderRight: function(row){
+  consolidate: function(values){
 
-    for( var idx in row ){
-
-      var next = (idx*1)+1;
-
-      if ( idx != 5 && row[idx].value && !_.isUndefined(row[next]) && !row[next].value) {
-        row[next].value = row[idx].value;
-        row[idx].value = null;
+    if ( values.length < 2 ){
+      return values;
+    }
+    for( var i in values ) {
+      if ( values[i] == values[i*1+1] ){
+        values[i*1+1] = values[i]*2;
+        values[i] = null;
       }
     }
-
-    return row;
-  },
-
-  orderLeft: function(row, i){
-
-    _.forEachRight(row, function(obj){
-
-      if ( obj.column != 1 && obj.value ){
-
-        var idx = _.indexOf(row, obj);
-        var nextIdx = idx - 1;
-
-        if ( !row[nextIdx].value ){
-          this.rows[i][nextIdx].value = obj.value;
-          this.rows[i][idx].value = null;
-        }
-
-      }
-
-    });
-    return;
+    return values;
   }
 
 };
