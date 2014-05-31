@@ -1,5 +1,8 @@
 'use strict';
-
+/**
+ * @todo Need to break apart the consolidate into two function.  FIRST combine the like adjacent tiles THEN move the files over into blank tile cells.
+ * @type {{somethingMoved: boolean, rows: null, right: Function, left: Function, up: Function, down: Function, reassemble: Function, consolidate: Function}}
+ */
 var move = {
 
   somethingMoved: false,
@@ -95,27 +98,15 @@ var move = {
     return tiles;
   },
 
+  /**
+   * @todo put the numbers together in an order based on the direction.  up needs to be opposite of down, etc...
+   * @param values
+   * @returns {*}
+   */
   consolidate: function(values){
 
-    if ( values.length < 2 ){
-      return values;
-    }
+    return boardConsolidate.init(values);
 
-    var skip = null;
-
-    for( var i in values ) {
-      if ( i == skip ){
-        skip = null;
-        continue;
-      }
-      if ( values[i] == values[i*1+1] ){
-        values[i*1+1] = values[i]*2;
-        values[i] = '';
-        skip = i*1+1;
-      }
-
-    }
-    return values;
   }
 
 };
